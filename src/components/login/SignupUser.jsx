@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { register } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 import './SignupCompany.css';
+import loginImage from '../../images/Authentication-pana.png';
 
 export default function SignupUser() {
 
@@ -40,52 +41,20 @@ export default function SignupUser() {
     <section className="log-in-page">
       <div className="main-page">
         <div className="welcome">
-          <h2>Welcome back</h2>
-          <span className="guide">Please enter user details.</span>
+          <h2>Bienvenue</h2>
+          <span className="guide">Veuillez entrer les détails de l'utilisateur.</span>
         </div>
         <div className="form" >
-          <div className="mb-3">
-            <label htmlFor="email" className="form-label">
-              Email
-            </label>
-            <input
-              name="email"
-              type="email"
-              className="form-control"
-              id="email"
-              placeholder="Enter your email"
-              value={user.email || ''}
-              onChange={handleInputChange}
-             /*  {...register('email', { required: true })} */
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="password" className="form-label">
-              Password
-            </label>
-            <input
-              name="password"
-              type="password"
-              className="form-control"
-              id="password"
-              placeholder="Enter your password"
-              value={user.password || ''}
-              onChange={handleInputChange}
-             /*  {...register('password', { required: true })} */
-            />
-          </div>
-
-          <div className="mb-3">
+        <div className="mb-3">
             <label className="form-label">
-            First Name
+            Prénom
             </label>
             <input
               name="firstName"
               type="text"
               className="form-control"
               id="firstName"
-              placeholder="Enter your firstName"
+              placeholder="Entez votre Prénom"
               value={user.firstName || ''}
               onChange={handleInputChange}
              /*  {...register('password', { required: true })} */
@@ -95,44 +64,72 @@ export default function SignupUser() {
 
           <div className="mb-3">
             <label htmlFor="lastName" className="form-label">
-            Last Name
+            Nom
             </label>
             <input
               name="lastName"
               type="lastName"
               className="form-control"
               id="lastName"
-              placeholder="Enter your Last Name"
+              placeholder="Entez votre Nom"
               value={user.lastName || ''}
               onChange={handleInputChange}
              /*  {...register('password', { required: true })} */
             />
           </div>
+          <div className="mb-3">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              className="form-control"
+              id="email"
+              placeholder="Entez votre Email"
+              value={user.email || ''}
+              onChange={handleInputChange}
+             /*  {...register('email', { required: true })} */
+            />
+          </div>
 
+          <div className="mb-3">
+            <label htmlFor="password" className="form-label">
+              Mot de passe
+            </label>
+            <input
+              name="password"
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Entez votre mot de passe"
+              value={user.password || ''}
+              onChange={handleInputChange}
+             /*  {...register('password', { required: true })} */
+            />
+          </div>
+
+          
           {errorMessage && <p className="error">{errorMessage}</p>}
 
           <div className="actions">
             <label htmlFor="check-box">
               <input type="checkbox" className="check-box" id="check-box" />
-              Remember for 30 days
+              Rappelez-vous 
             </label>
 
-            <a href="#!">Forgot Password?</a>
+            <a href="#!">Mot de passe oublié?</a>
           </div>
 
           <button onClick={()=>SignUpUser()}  className="btn btn-primary">
-            Sign in
+            S'identifier
           </button>
         </div>
-
-        <p>
-          <a href="#!">Don't have an account? Sign up</a>
-        </p>
       </div>
       <div className="sub-page">
-        <img
-          src="https://images.unsplash.com/photo-1675050757561-741bd739bc06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=900&q=60"
-          alt="image from unsplash"
+      <img
+          src={loginImage}
+          alt="Login"
           className="img"
         />
       </div>

@@ -1,7 +1,7 @@
 import React from "react"
 import { blog } from "../../dummydata"
 
-const BlogCard = () => {
+const InternCard = () => {
   return (
     <>
       {blog.map((val) => (
@@ -33,4 +33,4 @@ const BlogCard = () => {
   )
 }
 
-export default BlogCard
+export default InternCard

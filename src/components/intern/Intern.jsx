@@ -1,19 +1,19 @@
 import React from "react"
 import Back from "../common/back/Back"
-import BlogCard from "./BlogCard"
+import InternCard from "./InternCard"
 import "./blog.css"
 
-const Blog = () => {
+const Intern = () => {
   return (
     <>
-      <Back title='Blog Posts' />
+      <Back title='Our Intern' />
       <section className='blog padding'>
         <div className='container grid2'>
-          <BlogCard />
+          <InternCard />
         </div>
       </section>
     </>
   )
 }
 
-export default Blog
+export default Intern

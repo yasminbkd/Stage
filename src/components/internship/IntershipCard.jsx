@@ -2,7 +2,7 @@ import React from "react"
 import "./courses.css"
 import { coursesCard } from "../../dummydata"
 
-const CoursesCard = () => {
+const IntershipCard = () => {
   return (
     <>
       <section className='coursesCard'>
@@ -56,4 +56,4 @@ const CoursesCard = () => {
   )
 }
 
-export default CoursesCard
+export default IntershipCard

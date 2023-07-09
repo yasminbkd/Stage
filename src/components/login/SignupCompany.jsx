@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { register } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 import './SignupCompany.css';
+import loginImage from '../../images/Authentication-pana.png';
 
 export default function SignupCompany() {
 
@@ -40,10 +41,42 @@ export default function SignupCompany() {
     <section className="log-in-page">
       <div className="main-page">
         <div className="welcome">
-          <h2>Welcome back</h2>
-          <span className="guide">Please enter your Company details.</span>
+          <h2>Bienvenue</h2>
+          <span className="guide">Veuillez entrer les détails de votre entreprise.</span>
         </div>
         <div className="form" >
+        <div className="mb-3">
+            <label htmlFor="companyName" className="form-label">
+            Nom de l'entreprise
+            </label>
+            <input
+              name="companyName"
+              type="CompanyName"
+              className="form-control"
+              id="CompanyName"
+              placeholder="Entrer le Nom de l'entreprise"
+              value={user.companyName || ''}
+              onChange={handleInputChange}
+             /*  {...register('password', { required: true })} */
+            />
+          </div>
+
+          <div className="mb-3">
+            <label className="form-label">
+              Adresse
+            </label>
+            <input
+              name="address"
+              type="text"
+              className="form-control"
+              id="adresse"
+              placeholder="Entrer votre Adresse"
+              value={user.address || ''}
+              onChange={handleInputChange}
+             /*  {...register('password', { required: true })} */
+            />
+          </div>
+
           <div className="mb-3">
             <label htmlFor="email" className="form-label">
               Email
@@ -53,7 +86,7 @@ export default function SignupCompany() {
               type="email"
               className="form-control"
               id="email"
-              placeholder="Enter your email"
+              placeholder="Entrer votre Email"
               value={user.email || ''}
               onChange={handleInputChange}
              /*  {...register('email', { required: true })} */
@@ -62,48 +95,15 @@ export default function SignupCompany() {
 
           <div className="mb-3">
             <label htmlFor="password" className="form-label">
-              Password
+              Mot de passe
             </label>
             <input
               name="password"
               type="password"
               className="form-control"
               id="password"
-              placeholder="Enter your password"
+              placeholder="Entrer votre mot de passe"
               value={user.password || ''}
-              onChange={handleInputChange}
-             /*  {...register('password', { required: true })} */
-            />
-          </div>
-
-          <div className="mb-3">
-            <label className="form-label">
-              Adress
-            </label>
-            <input
-              name="address"
-              type="text"
-              className="form-control"
-              id="adresse"
-              placeholder="Enter your adress"
-              value={user.address || ''}
-              onChange={handleInputChange}
-             /*  {...register('password', { required: true })} */
-            />
-          </div>
-
-
-          <div className="mb-3">
-            <label htmlFor="companyName" className="form-label">
-            Company Name
-            </label>
-            <input
-              name="companyName"
-              type="CompanyName"
-              className="form-control"
-              id="CompanyName"
-              placeholder="Enter your Company Name"
-              value={user.companyName || ''}
               onChange={handleInputChange}
              /*  {...register('password', { required: true })} */
             />
@@ -114,25 +114,21 @@ export default function SignupCompany() {
           <div className="actions">
             <label htmlFor="check-box">
               <input type="checkbox" className="check-box" id="check-box" />
-              Remember for 30 days
+              Rappelez-vous 
             </label>
 
-            <a href="#!">Forgot Password?</a>
+            <a href="#!">Mot de passe oublié?</a>
           </div>
 
           <button onClick={()=>SignUpUser()}  className="btn btn-primary">
-            Sign in
+          S'identifier
           </button>
         </div>
-
-        <p>
-          <a href="#!">Don't have an account? Sign up</a>
-        </p>
       </div>
       <div className="sub-page">
-        <img
-          src="https://images.unsplash.com/photo-1675050757561-741bd739bc06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=900&q=60"
-          alt="image from unsplash"
+      <img
+          src={loginImage}
+          alt="Login"
           className="img"
         />
       </div>

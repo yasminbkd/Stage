@@ -7,10 +7,8 @@ import SignupUser from './components/login/SignupUser';
 import Signin from './components/login/Login';
 import About from './components/about/About';
 
-import CourseHome from "./components/allcourses/CourseHome"
-import Team from "./components/team/Team"
-import Pricing from "./components/pricing/Pricing"
-import Blog from "./components/blog/Blog"
+import IntershipHome from './components/internship/IntershipHome';
+import Intern from './components/intern/Intern';
 import Contact from "./components/contact/Contact"
 import Footer from "./components/common/footer/Footer"
 import AboutCard from './components/about/AboutCard';
@@ -20,21 +18,27 @@ import Home from "./components/home/Home"
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-        <Routes>
-        <Route   path='/' element={<Home/>} />
-        {/* <Route path="/company-signup" element={<SignupCompany />} />
+      <Routes>
+        <Route path="/" element={<Layout><Home /></Layout>} />
+        <Route path="/about" element={<Layout><About /></Layout>} />
+        <Route path="/intership" element={<Layout><IntershipHome /></Layout>} />
+        <Route path="/intern" element={<Layout><Intern /></Layout>} />
+        <Route path="/contact" element={<Layout><Contact /></Layout>} />
+        <Route path="/company-signup" element={<SignupCompany />} />
         <Route path="/user-signup" element={<SignupUser />} />
-        <Route path="/signin" element={<Signin />} /> */}
-          <Route  path='/about' element={<About/>} />
-          <Route  path='/courses' element={<CourseHome/>} />
-          <Route  path='/team' element={<Team/>} />
-          <Route  path='/pricing' element={<Pricing/>} />
-          <Route  path='/journal' element={<Blog/>} />
-          <Route  path='/contact' element={<Contact/>} />
-        </Routes>
-        <Footer />
+        <Route path="/signin" element={<Signin />} />
+      </Routes>
     </BrowserRouter>
+  );
+}
+
+function Layout({ children }: { children: React.ReactNode }) {
+  return (
+    <>
+      <Header />
+      {children}
+      <Footer />
+    </>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from "react"
 
+// fait appel au composant de la page d'acceuil qui sont dans Hero.jsx
 const Heading = ({ subtitle, title }) => {
   return (
     <>

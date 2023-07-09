@@ -1,16 +1,16 @@
 import React from "react"
-import "../blog/blog.css"
+import "../intern/blog.css"
 import { blog } from "../../dummydata"
 import Heading from "../common/heading/Heading"
 
 // copy code of blog => blogCard
 
-const Hblog = () => {
+const HInternship = () => {
   return (
     <>
       <section className='blog'>
         <div className='container'>
-          <Heading subtitle='OUR BLOG' title='Recent From Blog' />
+          <Heading subtitle='OUR INTERN' title='Recent From Intern' />
           <div className='grid2'>
             {blog.slice(0, 3).map((val) => (
               <div className='items shadow'>
@@ -44,4 +44,4 @@ const Hblog = () => {
   )
 }
 
-export default Hblog
+export default HInternship

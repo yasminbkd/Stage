@@ -4,17 +4,17 @@ import "./about.css"
 import { homeAbout } from "../../dummydata"
 import Awrapper from "./Awrapper"
 
-
+// home page partie 2
 export default function AboutCard() {
   return (
     <>
     <section className='aboutHome'>
       <div className='container flexSB'>
         <div className='left row'>
-          <img src='./images/about.webp' alt='' />
+          <img src='./images/Opinion-cuate.png' alt='' />
         </div>
         <div className='right row'>
-          <Heading subtitle='LEARN ANYTHING' title='Benefits About Online Learning Expertise' />
+          <Heading subtitle='MOTIVATIONS' title='Bénéficier de trouver une opportunité de stage ' />
           <div className='items'>
             {homeAbout.map((val) => {
               return (

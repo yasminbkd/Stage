@@ -20,6 +20,16 @@
   margin: 0;
   padding: 0;
 }
+.btn-l {
+  position: absolute;
+  top: 585px; /* Définissez la valeur appropriée pour la position verticale */
+  right: 830px; /* Définissez la valeur appropriée pour la position horizontale */
+}
+.primary-btn{
+  position: absolute;
+  top: 585px; /* Définissez la valeur appropriée pour la position verticale */
+  right: 1000px; /* Définissez la valeur appropriée pour la position horizontale */
+}
 @media screen and (max-width: 768px) {
   .margin {
     height: 40vh;

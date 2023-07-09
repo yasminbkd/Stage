@@ -1,25 +1,37 @@
-import React from "react"
+import React, { useState } from "react";
+import Image from '../../../images/logo.png';
+import "./header.css";
+import { Link } from 'react-router-dom';
 
 const Head = () => {
-  return (
-    <>
-      <section className='head'>
-        <div className='container flexSB'>
-          <div className='logo'>
-            <h1>ACADEMIA</h1>
-            <span>ONLINE EDUCATION & LEARNING</span>
-          </div>
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
-          <div className='social'>
-            <i className='fab fa-facebook-f icon'></i>
-            <i className='fab fa-instagram icon'></i>
-            <i className='fab fa-twitter icon'></i>
-            <i className='fab fa-youtube icon'></i>
-          </div>
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  return (
+    <section className='head'>
+      <img src={Image} alt="image" />
+      <div className="options">
+        <Link to="/signin" className="option-link">Se connecter</Link>
+        <span className="separator">|</span>
+        <div className="signup-dropdown">
+          <span className="signup-text" onClick={toggleDropdown}>S'authentifier &#x25BE;</span>
+          {isDropdownOpen && (
+            <ul className="dropdown-content">
+              <li>
+                <Link to="/company-signup">Entreprise</Link>
+              </li>
+              <li>
+                <Link to="/user-signup">Utilisateur</Link>
+              </li>
+            </ul>
+          )}
         </div>
-      </section>
-    </>
-  )
+      </div>
+    </section>
+  );
 }
 
-export default Head
+export default Head;

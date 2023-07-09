@@ -3,6 +3,8 @@ import { useForm } from 'react-hook-form';
 import { login } from '../../services/authService';
 import { useNavigate } from 'react-router-dom';
 import './SignupCompany.css';
+import loginImage from '../../images/Authentication-pana.png';
+
 
 export default function Login() {
   const navigate = useNavigate();
@@ -69,18 +71,22 @@ export default function Login() {
           </div>
 
           <button type="submit" className="btn btn-primary">
-            Sign In
+            S'authentifier
           </button>
         </form>
 
         <p>
-          <a href="#!">Don't have an account? Sign up</a>
+          <a>Vous n'avez pas de compte ? S'identifier</a>
+        </p>
+        <p>
+        <a href="http://localhost:3000/company-signup"> Société / </a>
+        <a href="http://localhost:3000/user-signup"> Utilisateur</a>
         </p>
       </div>
       <div className="sub-page">
-        <img
-          src="https://images.unsplash.com/photo-1675050757561-741bd739bc06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=900&q=60"
-          alt="image from unsplash"
+      <img
+          src={loginImage}
+          alt="Login"
           className="img"
         />
       </div>

@@ -1,7 +1,7 @@
 import React from "react"
 import { awrapper } from "../../dummydata"
 
-
+//  les carte de home page partie 2
 
 export default function Awrapper() {
   return (

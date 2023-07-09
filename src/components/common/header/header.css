@@ -3,6 +3,12 @@
   padding: 20px 0;
   color: #fff;
 }
+.head img {
+  margin-left: 50px;
+  min-width: 100px; /* Remplacez la valeur par la taille minimale souhaitée */
+  width: 10%; /* Remplacez la valeur par la largeur souhaitée (10% dans votre exemple) */
+  object-fit: cover;
+}
 .logo h1 {
   font-size: 35px;
   font-weight: 900;
@@ -33,6 +39,29 @@ header ul li a {
 header ul li a:hover {
   color: #1eb2a6;
 }
+.options {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 10px;
+}
+
+.signup-dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style: none;
+  padding: 10px;
+  margin-top: 5px;
+}
+
 .start {
   background-color: #1eb2a6;
   padding: 30px 70px;
@@ -75,3 +104,4 @@ header ul li a:hover {
     background-color: #1eb2a6;
   }
 }
+
