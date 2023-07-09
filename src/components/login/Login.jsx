@@ -16,7 +16,7 @@ export default function Login() {
     try {
       const response = await login({ email: data.email, password: data.password });
       if (response) {
-        navigate('/dashboard');
+        navigate('/intership');
       }
     } catch (error) {
       setErrorMessage('Invalid email or password. Please try again.');
@@ -27,8 +27,8 @@ export default function Login() {
     <section className="log-in-page">
       <div className="main-page">
         <div className="welcome">
-          <h2>Welcome back</h2>
-          <span className="guide">Please sign in.</span>
+          <h2>Bienvenue</h2>
+          <span className="guide">Veuillez vous connecter.</span>
         </div>
         <form className="form" onSubmit={handleSubmit(handleSignIn)}>
           <div className="mb-3">
@@ -47,7 +47,7 @@ export default function Login() {
 
           <div className="mb-3">
             <label htmlFor="password" className="form-label">
-              Password
+              Mot de passe
             </label>
             <input
               name="password"
@@ -64,14 +64,14 @@ export default function Login() {
           <div className="actions">
             <label htmlFor="check-box">
               <input type="checkbox" className="check-box" id="check-box" />
-              Remember for 30 days
+              Rappelez-vous 
             </label>
 
-            <a href="#!">Forgot Password?</a>
+            <a href="#!">Mot de passe oublié?</a>
           </div>
 
           <button type="submit" className="btn btn-primary">
-            S'authentifier
+            Se connecter
           </button>
         </form>
 
