@@ -17,6 +17,7 @@ import Header from "./components/common/header/Header"
 import Home from "./components/home/Home"
 function App() {
   return (
+   
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout><Home /></Layout>} />

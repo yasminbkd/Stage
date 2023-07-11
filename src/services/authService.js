@@ -33,7 +33,7 @@ export function DeleteUser(credentials){
 export function GetUser(){
     return axios
         .get(`${process.env.REACT_APP_API_URL}auth/user` ,{ withCredentials: true } )
-        .then(response => response)
+        .then(response => response.data)
     
 }
 
@@ -66,17 +66,19 @@ export function register(credentials){
 
 
 export function logout() {
-
     return axios
-    .post(`${process.env.REACT_APP_API_URL}auth/logout`)
-    .then((res) => {
-        console.log(res)
-         return res.message
-    });
+      .post('http://localhost:8080/logout')
+      .then((res) => {
+        console.log(res);
+        console.log("yekhdem")
+        return res.message;
+      }).catch((err)=>{
+        console.log("laaaaaa")
 
-
-
-}
+        console.log(err)
+      });
+  }
+  
 
 
 

@@ -31,12 +31,7 @@ const IntershipCard = () => {
                 <div className='text'>
                   <h1>{stage.titre}</h1>
                   <div className='rate'>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <i className='fa fa-star'></i>
-                    <label htmlFor=''>(5.0)</label>
+                    <label htmlFor=''>({stage.duree} Mois )</label>
                   </div>
                   <div className='details'>
                     <>
@@ -45,7 +40,6 @@ const IntershipCard = () => {
                           <h4>{stage.competences.join(" / ")}</h4>
                         </div>
                       </div>
-                      <span>{stage.duree} Mois </span>
                       <span>{stage.description} </span>
                     </>
                   </div>
