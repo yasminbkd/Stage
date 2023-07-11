@@ -50,7 +50,7 @@ const IntershipCard = () => {
                   {stage.outils.join(" / ")}
                 </h3>
               </div>
-              <button className='outline-btn'>POSTULER !</button>
+              <button className='outline-btn '>POSTULER !</button>
             </div>
           ))}
         </div>
