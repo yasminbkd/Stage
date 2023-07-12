@@ -4,6 +4,7 @@ import IntershipCard from "./IntershipCard";
 import { Link } from 'react-router-dom';
 import Heading from "../common/heading/Heading";
 import { Button, Modal, Form } from 'react-bootstrap';
+import Back2 from "../common/back/Back2";
 
 const IntershipHome = () => {
   const [showModal, setShowModal] = useState(false);
@@ -55,7 +56,7 @@ const IntershipHome = () => {
 
   return (
     <>
-      <Back title='Découvrir les stages' />
+      <Back2 title='Découvrir nos stages' />
       <button className='primary-btn' onClick={toggleModal}>COMMENCER MAINTENANT <i className='fa fa-long-arrow-alt-right'></i></button>
       <Modal show={showModal} onHide={toggleModal} centered>
         <Modal.Header closeButton>
