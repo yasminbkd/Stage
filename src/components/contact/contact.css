@@ -66,3 +66,27 @@ form .flexSB input:nth-child(1) {
     width: 100%;
   }
 }
+/* Add this CSS in your contact.css file or create a separate CSS file for the popup styles */
+.popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  animation: fadeOut 3s ease-in-out; /* You can add a fade-out animation to make the message disappear after some time */
+}
+
+/* Optional fade-out animation keyframes */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

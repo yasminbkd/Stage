@@ -4,8 +4,10 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import SignupCompany from './components/login/SignupCompany';
 import SignupUser from './components/login/SignupUser';
-import Signin from './components/login/Login';
+import Signin from './components/login/SignIn';
 import About from './components/about/About';
+import Applications from './components/applications/Applications';
+import Postuler from './components/postuler/Postuler';
 
 import IntershipHome from './components/internship/IntershipHome';
 import Intern from './components/intern/Intern';
@@ -23,7 +25,8 @@ function App() {
         <Route path="/" element={<Layout><Home /></Layout>} />
         <Route path="/about" element={<Layout><About /></Layout>} />
         <Route path="/intership" element={<Layout><IntershipHome /></Layout>} />
-        <Route path="/intern" element={<Layout><Intern /></Layout>} />
+        <Route path="/postuler" element={<Layout><Postuler/></Layout>} />
+        <Route path="/intern" element={<Layout><Applications /></Layout>} />
         <Route path="/contact" element={<Layout><Contact /></Layout>} />
         <Route path="/company-signup" element={<SignupCompany />} />
         <Route path="/user-signup" element={<SignupUser />} />

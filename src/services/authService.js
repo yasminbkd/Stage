@@ -19,7 +19,7 @@ export function hasAuthenticated() {
 
 export function DeleteUser(credentials){
     return axios
-        .post(`${process.env.REACT_APP_API_URL}auth/delete`, credentials , { withCredentials: true })
+        .post(`http://localhost:8080/auth/delete`, credentials , { withCredentials: true })
         .then(() => {
             removeItem('token');
             return true;
@@ -32,8 +32,8 @@ export function DeleteUser(credentials){
 
 export function GetUser(){
     return axios
-        .get(`${process.env.REACT_APP_API_URL}auth/user` ,{ withCredentials: true } )
-        .then(response => response.data)
+        .get(`http://localhost:8080/auth/user` ,{ withCredentials: true } )
+        .then(response => response)
     
 }
 

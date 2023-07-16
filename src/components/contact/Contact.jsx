@@ -11,6 +11,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const [subject, setSubject] = useState('');
   const [message, setMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,6 +26,12 @@ const Contact = () => {
     .post("http://localhost:8080/contact", { name, email, subject, message })
     .then((response) => {
       console.log(response);
+      setSuccessMessage(true); // Set the success message state to true on successful submission
+      // Reset the form fields after successful submission
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
     })
     .catch((err) => {
       console.log("Erreur :", err);
@@ -96,6 +103,12 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      {/* Popup message */}
+      {successMessage && (
+        <div className="popup">
+          <p>Message envoyé avec succès!</p>
+        </div>
+      )}
     </>
   );
 };

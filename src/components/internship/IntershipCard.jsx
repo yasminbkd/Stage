@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./courses.css"
 import { coursesCard } from "../../dummydata"
+import { Link } from "react-router-dom";
 
 const IntershipCard = () => {
   const [stages, setStages] = useState([]);
@@ -50,7 +51,9 @@ const IntershipCard = () => {
                   {stage.outils.join(" / ")}
                 </h3>
               </div>
-              <button className='outline-btn '>POSTULER !</button>
+              <Link to="/postuler"><button className="outline-btn">
+                    POSTULER
+              </button></Link>
             </div>
           ))}
         </div>
