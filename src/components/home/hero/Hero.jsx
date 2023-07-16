@@ -4,7 +4,7 @@ import Heading from "../../common/heading/Heading";
 import "./Hero.css";
 import { Link } from 'react-router-dom';
 
-
+// page d'acceuil 
 const Hero = () => {
   const navigate = useNavigate();
 
@@ -17,8 +17,8 @@ const Hero = () => {
       <section className='hero'>
         <div className='container'>
           <div className='row'>
-            <Heading subtitle='Bienvenue sur CLEVORY TRANING' title='Meilleure Opportunité de stage en ligne' />
-            <p> Optimisez votre parcours de stage avec la meilleure plateforme.</p>
+            <Heading subtitle='Bienvenue sur CLEVORY TRANING' title='Meilleure Opportunité de stage' />
+            <p> Optimisez votre parcours de stage avec notre meilleure plateforme.</p>
           </div>
         </div>
       </section>

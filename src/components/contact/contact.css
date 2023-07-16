@@ -42,6 +42,19 @@ form .flexSB input:nth-child(1) {
   font-size: 15px;
   word-spacing: 5px;
 }
+.primary-btn2 {
+  background-color: #1eb2a6;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contacts button.primary-btn2:hover {
+  background-color: #0c7b70;
+}
+
 @media screen and (max-width: 768px) {
   .contacts .container {
     flex-direction: column;

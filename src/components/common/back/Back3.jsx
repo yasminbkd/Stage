@@ -1,15 +1,16 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { useLocation } from "react-router-dom"
 import "./back.css"
 
-// l'interface de la page stage 
-const Back2 = ({ title }) => {
+
+// l'interface de la page stagiaire 
+const Back3 = ({ title }) => {
     const location = useLocation()
   
     return (
       <>
       <div>
-        <section className="back2">
+        <section className="back3">
           <h1>{title}</h1>
         </section>
         <div className='margin'></div>
@@ -17,4 +18,4 @@ const Back2 = ({ title }) => {
       </>
     )
   }
-  export default Back2
+  export default Back3

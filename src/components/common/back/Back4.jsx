@@ -1,20 +1,22 @@
-import React, { PureComponent } from 'react'
+import React from 'react'
 import { useLocation } from "react-router-dom"
 import "./back.css"
 
-// l'interface de la page stage 
-const Back2 = ({ title }) => {
+
+// l'interface de la page contact
+const Back4 = ({ title }) => {
     const location = useLocation()
   
     return (
       <>
       <div>
-        <section className="back2">
+        <section className="back4">
           <h1>{title}</h1>
+          
         </section>
         <div className='margin'></div>
         </div>
       </>
     )
   }
-  export default Back2
+  export default Back4

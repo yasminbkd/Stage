@@ -57,15 +57,16 @@ const IntershipHome = () => {
   return (
     <>
       <Back2 title='Découvrir nos stages' />
-      <button className='primary-btn' onClick={toggleModal}>COMMENCER MAINTENANT <i className='fa fa-long-arrow-alt-right'></i></button>
+      <button className='primary-btn' onClick={toggleModal}>AJOUTER VOS OFFRES <i className='fa fa-long-arrow-alt-right'></i></button>
+      {/*Formulaire de stage */}
       <Modal show={showModal} onHide={toggleModal} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Stage Form</Modal.Title>
+          <Modal.Title>Ajouter un offre de stage</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form onSubmit={handleSubmit}>
             <Form.Group controlId="titre">
-              <Form.Label>Titre</Form.Label>
+              <Form.Label>Titre : </Form.Label>
               <Form.Control
                 type="text"
                 name="titre"
@@ -75,7 +76,7 @@ const IntershipHome = () => {
               />
             </Form.Group>
             <Form.Group controlId="duree">
-              <Form.Label>Durée</Form.Label>
+              <Form.Label>Durée : </Form.Label>
               <Form.Control
                 type="text"
                 name="duree"
@@ -85,7 +86,7 @@ const IntershipHome = () => {
               />
             </Form.Group>
             <Form.Group controlId="competences">
-              <Form.Label>Compétences</Form.Label>
+              <Form.Label>Compétences : </Form.Label>
               <Form.Control
                 type="text"
                 name="competences"
@@ -95,7 +96,7 @@ const IntershipHome = () => {
               />
             </Form.Group>
             <Form.Group controlId="description">
-              <Form.Label>Description</Form.Label>
+              <Form.Label>Description : </Form.Label>
               <Form.Control
                 as="textarea"
                 rows={3}
@@ -106,7 +107,7 @@ const IntershipHome = () => {
               />
             </Form.Group>
             <Form.Group controlId="outils">
-              <Form.Label>Outils</Form.Label>
+              <Form.Label>Outils : </Form.Label>
               <Form.Control
                 type="text"
                 name="outils"

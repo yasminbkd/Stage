@@ -1,55 +1,103 @@
-import React from "react"
-import Back from "../common/back/Back"
-import "./contact.css"
+import React, { useState } from "react";
+import Back4 from "../common/back/Back4";
+import "./contact.css";
+import axios from "axios";
 
 const Contact = () => {
-  const map = 'https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d904726.6131739549!2d85.24565535!3d27.65273865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1652535615693!5m2!1sen!2snp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" '
+  const map =
+    "https://maps.google.com/maps?q=Clevory+Training,+Charguia+1&z=15&output=embed";
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Handle the form submission
+    console.log("Nom:", name);
+    console.log("Email:", email);
+    console.log("Sujet:", subject);
+    console.log("Message:", message);
+
+    axios
+    .post("http://localhost:8080/contact", { name, email, subject, message })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((err) => {
+      console.log("Erreur :", err);
+    });
+  }
   return (
     <>
-      <Back title='Contact us' />
-      <section className='contacts padding'>
-        <div className='container shadow flexSB'>
-          <div className='left row'>
+      <Back4 title="Contact us" />
+      <section className="contacts padding">
+        <div className="container shadow flexSB">
+          <div className="left row">
             <iframe src={map}></iframe>
           </div>
-          <div className='right row'>
-            <h1>Contact us</h1>
-            <p>We're open for any suggestion or just to have a chat</p>
+          <div className="right row">
+            <h1>Contactez-nous</h1>
+            <p>Nous sommes ouverts à toute suggestion ou simplement pour discuter.</p>
 
-            <div className='items grid2'>
-              <div className='box'>
-                <h4>ADDRESS:</h4>
-                <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+            <div className="items grid2">
+              <div className="box">
+                <h4>ADRESSE:</h4>
+                <p>8, Rue des Mineraux (Ex-Rue 8603) Charguia 1, 2035 Tunisia</p>
               </div>
-              <div className='box'>
+              <div className="box">
                 <h4>EMAIL:</h4>
-                <p> info@yoursite.com</p>
+                <p>contact@clevory.com</p>
               </div>
-              <div className='box'>
-                <h4>PHONE:</h4>
-                <p> + 1235 2355 98</p>
+              <div className="box">
+                <h4>TÉLÉPHONE:</h4>
+                <p> +216 31 404 377</p>
               </div>
             </div>
 
-            <form action=''>
-              <div className='flexSB'>
-                <input type='text' placeholder='Name' />
-                <input type='email' placeholder='Email' />
+            <form onSubmit={handleSubmit}>
+              <div className="flexSB">
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Nom"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
               </div>
-              <input type='text' placeholder='Subject' />
-              <textarea cols='30' rows='10'>
-                Create a message here...
-              </textarea>
-              <button className='primary-btn'>SEND MESSAGE</button>
+              <input
+                type="text"
+                name="subject"
+                placeholder="Sujet"
+                value={subject}
+                onChange={(e) => setSubject(e.target.value)}
+              />
+              <textarea
+                name="message"
+                cols="30"
+                rows="10"
+                placeholder="Créez un message ici..."
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+              ></textarea>
+              <button type="submit" className="primary-btn2">
+                ENVOYER MESSAGE
+              </button>
             </form>
-
-            <h3>Follow us here</h3>
-            <span>FACEBOOK TWITTER INSTAGRAM DRIBBBLE</span>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

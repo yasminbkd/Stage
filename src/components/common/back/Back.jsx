@@ -2,6 +2,8 @@ import React from "react"
 import { useLocation } from "react-router-dom"
 import Heading from "../../common/heading/Heading";
 import "./back.css"
+
+// l'interface de la page a propos 
 const Back = ({ title }) => {
   const location = useLocation()
 
