@@ -10,8 +10,6 @@ const Home = () => {
       <Hero />
       <AboutCard />
       <HIntern />
-      <HInternship/>
-    
     </>
   )
 }

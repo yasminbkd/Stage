@@ -10,7 +10,7 @@ const HIntern = () => {
     <>
       <section className='blog'>
         <div className='container'>
-          <Heading subtitle='OUR INTERN' title='Recent From Intern' />
+          <Heading subtitle='NOS STAGIAIRES' title='Récent de stagiaire' />
           <div className='grid2'>
             {blog.slice(0, 3).map((val) => (
               <div className='items shadow'>

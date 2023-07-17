@@ -112,11 +112,6 @@ export default function SignupCompany() {
           {errorMessage && <p className="error">{errorMessage}</p>}
 
           <div className="actions">
-            <label htmlFor="check-box">
-              <input type="checkbox" className="check-box" id="check-box" />
-              Rappelez-vous 
-            </label>
-
             <a href="#!">Mot de passe oublié?</a>
           </div>
 

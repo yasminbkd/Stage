@@ -11,6 +11,7 @@ const Postuler = () => {
   const [internshipDuration, setInternshipDuration] = useState("");
   const [message, setMessage] = useState("");
 
+
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
